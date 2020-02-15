@@ -1,0 +1,263 @@
+// Place all the styles related to the public_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.for_slick_slider {
+  display: flex;
+}
+
+.for_slick_slider .items {
+  width: 350px;
+  height: 250px;
+  margin: 50px;
+}
+
+
+.for_slick_slider .items img {
+  width: 350px;
+  height: 250px;
+}
+
+.main-body {
+  margin-top: 150px;
+}
+
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+  margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.429;
+}
+
+a {
+  color: #999966;
+}
+
+a:hover {
+  color: #996600;
+}
+
+h3 {
+  border-bottom: 3px solid #a0c238;
+  border-left: 6px solid #f39800;
+  padding: 12px 0 12px 5px;
+  margin:30px 0px 20px;
+}
+
+
+#pageBodyMain .page-title {
+  font-size: 26px;
+  background-color: #f2f2e5;
+  padding: 5px 15px;
+  line-height: 1.231;
+  margin-top: 0;
+}
+
+.heading-typeA {
+  font-size: 18px;
+  color: #349fa6;
+  border-left: solid 5px #e3e4d9;
+  padding: 5px;
+}
+
+.articleDetailHead {
+  border-bottom: solid 1px #cccccc;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+.articleDetailFoot {
+  border-top: solid 1px #cccccc;
+  margin-top: 30px;
+  padding-top: 15px;
+}
+
+.articleDetailBody section {
+  margin: 30px 0;
+}
+
+.creditUnit {
+  padding: 10px;
+  border: solid 1px #cccccc;
+}
+
+.creditUnit p {
+  font-size: 20px;
+}
+
+.heading-typeC li {
+  font-size: 14px;
+  list-style-type: square;
+  padding-left: 15px;
+}
+
+
+.thumbnail {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+#page {
+  width: 1050px;
+  margin: 0 auto;
+}
+
+#siteTitle {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  font-family: 'Antic Didone' , serif;
+  background: #3f3f3f;
+  color: #ffffff;
+}
+
+
+#pageHead  #catchcopy {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+ #pageHead .globalNavi {
+  border: solid #cccccc;
+  border-width: 1px 0;
+  padding: 10px 0;
+}
+
+#pageHead .globalNavi ul li {
+  list-style: none;
+  width: 250px;
+  float: left;
+  border-left: solid 1px #cccccc;
+  padding: 0 10px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.429;
+}
+
+#pageHead .globalNavi ul li:first-child {
+  border-left: none;
+}
+
+#pageHead .globalNavi ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+#pageHead .globalNavi ul li a:hover {
+  background-color: #e0ffff;
+}
+
+#pageHead .globalNavi ul {
+  margin: 0;
+  padding: 0;
+}
+
+#pageHead .globalNavi ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+#copyright small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#pageFoot {
+  border-top: solid 1px #cccccc;
+  margin-top: 15px;
+}
+
+.btn-wrap a {
+  border: 1px solid #f39800;
+  color: #f39800;
+  padding: 15px 30px;
+}
+
+.btn-wrap {
+  margin-top: 30px;
+}
+
+#pageBody {
+ margin-top: 30px;
+}
+
+#pageBody:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#pageBodyMain {
+  width: 500px;
+  float: left;
+
+}
+
+#pageBodySub {
+  width: 300px;
+  margin-left: 50px;
+  float: right;
+
+}
+
+  .blue_box {
+  background: #d4f3ff;
+  border-color: #82c8e2;
+  color: #465d65;
+  padding: 15px;
+  margin: 15px;
+  border: 2px solid #dddddd;
+  border-radius: 0.2em;
+}
+
+.box_title span {
+  background: #82c8e2;
+  position: relative;
+  top: -0.85em;
+  padding: 0.1em 0.5em;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 0.2em;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.pink_box {
+  background: #ffeeee;
+  border-color: #f7b2b2;
+  color: #775454;
+  padding: 15px;
+  margin: 15px;
+  border: 2px solid #dddddd;
+  border-radius: 0.2em
+}
+
+.yellow_box {
+  background: #fff8d4;
+  border-color: #ded647;
+  color: #636546;
+  padding: 15px;
+  margin: 15px;
+  border: 2px solid #dddddd;
+  border-radius: 0.2em;
+}
+
+.yellow_box ul  {
+  padding-left: 20px;
+}

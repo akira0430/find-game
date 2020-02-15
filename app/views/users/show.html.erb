@@ -1,0 +1,42 @@
+<div class="row no-gutters">
+  <div class="col-md-4 text-center card">
+    <% if @user.photo.present? %>
+      <%= image_tag @user.photo.thumb.url, style: "height: 250px;" %>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <div class="row text-center">
+      <div class="col-4 mt-4">
+        <h5>姓:</h5>
+        <h5>名前:</h5>
+        <h5>ユーザー名:</h5>
+        <h5>メール:</h5>
+      </div>
+      <div class="col-8 mt-4">
+        <h5><%= @user.first_name %></h5>
+        <h5><%= @user.last_name %></h5>
+        <h5><%= @user.user_name %></h5>
+        <h5><%= @user.email %></h5>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-4 text-center">
+        <h5>自己紹介:</h5>
+      </div>
+      <div class="col-md-8">
+        <p><%= @user.introduction if @user.introduction.present? %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="py-5">
+<% if @microposts.any? %>
+  <% @microposts.each do |micropost| %>
+  <ul class="list-unstyled">
+    <%= render @microposts %>
+  </ul>
+  <% end %>
+  <%= paginate @microposts %>
+<% end %>
+</div>

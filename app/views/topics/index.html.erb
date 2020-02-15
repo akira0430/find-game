@@ -1,0 +1,31 @@
+<h3 class="mb-5 text-center">売買するゲームの情報を投稿しよう！</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>価格(円)</th>
+      <th>ゲーム</th>
+      <th>ユーザー情報</th>
+      <th>ユーザー編集</th>
+      <th>ユーザー削除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= topic.title %></td>
+        <td><%= topic.price %></td>
+        <td><%= topic.game %></td>
+        <td><%= link_to 'プロフ', topic, class: "text-info" %></td>
+        <td><%= link_to '編集', edit_topic_path(topic), class: "text-info" %></td>
+        <td><%= link_to '削除', topic, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規投稿', new_topic_path, class: "btn btn-primary" %>

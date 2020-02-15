@@ -1,0 +1,35 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal">
+        <%= link_to "Find Game", root_path, class: "text-dark" %>
+      </h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="nav-item mb-2">
+          <%= link_to users_path, class: "p-2 text-dark" do %>
+          <i class="fab fa-accessible-icon"></i>
+          ユーザー情報
+          <% end %>
+        </a>
+        <a class="nav-item mb-2 ml-2">
+          <%= link_to topics_path, class: "p-2 text-dark" do  %>
+            <i data-feather="tool"></i>
+            トピック
+          <% end %>
+        </a>
+        <a class="nav-item mb-2 ml-2">
+          <%= link_to user_path(current_user), class: "p-2 text-dark" do %>
+            <i class="far fa-id-badge"></i>
+            プロフィール
+          <% end %>
+        </a>
+      </nav>
+        <a class="nav-item mb-2 ml-2">
+          <%= link_to microposts_path(current_user), class: "p-2 text-dark" do %>
+            <i class="fa fa-users"></i>
+            みんなの投稿
+          <% end %>
+        </a>
+        <%= link_to destroy_user_session_path, method: :delete, class: "nav-link text-dark" do %>
+          <i data-feather="log-out"></i>
+          ログアウト
+        <% end %>
+    </div>

@@ -1,0 +1,42 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <%= link_to users_path, class: "nav-link text-dark" do %>
+              <i class="fab fa-accessible-icon"></i>
+              ユーザー情報
+            <% end %>
+          </li>
+          <li class="nav-item mb-2">
+            <%= link_to topics_path, class: "nav-link text-dark" do  %>
+              <i data-feather="tool"></i>
+              トピック
+            <% end %>
+          </li>
+          <li class="nav-item mb-2">
+            <%= link_to edit_user_registration_path, class: "nav-link text-dark" do %>
+            <i data-feather="user-check"></i>
+            ユーザー設定
+            <% end %>
+          </li>
+          <li class="nav-item mb-2">
+            <%= link_to user_path(current_user), class: "nav-link text-dark" do %>
+              <i class="far fa-id-badge"></i>
+              プロフィール
+            <% end %>
+          </li>
+          <li class="nav-item mb-2">
+            <%= link_to microposts_path(current_user), class: "nav-link text-dark" do %>
+              <i class="fa fa-users"></i>
+              みんなの投稿
+            <% end %>
+          </li>
+          <li class="nav-item mb-2">
+            <%= link_to destroy_user_session_path, method: :delete, class: "nav-link text-dark" do %>
+              <i data-feather="log-out"></i>
+              ログアウト
+            <% end %>
+          </li>  
+        </ul>
+    </div>
+</nav>

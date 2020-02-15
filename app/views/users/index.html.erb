@@ -1,0 +1,30 @@
+<h3 class="text-center">ユーザー情報</h3>
+
+<div class="container">
+  <%= paginate @users %>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">プロフ画像</th>
+      <th scope="col">氏名</th>
+      <th scope="col">ユーザー名</th>
+      <th scope="col">ユーザー削除</th>
+    </tr>
+  </thead>
+  <% @users.each do |user| %>
+  <tbody>
+    <tr>
+      <th scope="row"><%= image_tag user.photo.thumb.url if user.photo.present? %></th>
+      <td><%= user.last_name %></td>
+      <td><%= user.user_name %></td>
+      <td>
+        <% if current_user?(user) %>
+        <%= link_to "削除", user_registration_path, method: :delete, data: { confirm: "本当に削除してよろしいですか？" }, class: 'btn btn-danger' %>
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
+<%= paginate @users %>
+</div>

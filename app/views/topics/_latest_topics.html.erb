@@ -1,0 +1,5 @@
+<%= @topics.each do |topic| %>
+  <div class="col-3">
+    <%= image_tag topic.photo.thumb.url %>
+  </div>
+<% end %>

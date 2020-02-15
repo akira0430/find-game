@@ -1,0 +1,57 @@
+<%= form_with(model: topic, local: true) do |form| %>
+  <% if topic.errors.any? %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>入力していない項目があります</strong>
+    <ul class="list-group">
+      <% topic.errors.full_messages.each do |msg| %>
+      <li class="list-group-item list-group-item-danger"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="form-group mt-5">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :price %>
+    <%= form.number_field :price, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :game %>
+    <%= form.text_field :game, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :item_counts %>
+    <%= form.number_field :item_counts, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :details %>
+    <%= form.text_area :details, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :photo, "画像" %>
+    <%= form.file_field :photo, class: "form-control" %>
+    <%= form.hidden_field :photo_cache %>
+
+    <% if @topic.photo.present? %>
+      <%= image_tag @topic.photo.thumb.url, class: "mt-3" %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "投稿", class: "btn btn-primary" %>
+  </div>
+<% end %>

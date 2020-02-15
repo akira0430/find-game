@@ -1,0 +1,123 @@
+<div class="main-container">
+  <div class="main-slide">
+  <% if @topic.photo.present? %>
+  <%= image_tag @topic.photo.thumb.url %>
+  <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <p class="h2 mt-5">販売中!</p>
+
+      <div class="bg-light mt-5">
+        <p>
+        <i class="fa fa-gamepad"></i><strong>ゲーム名:</strong><span class="text-center"><%= @topic.game %></span>
+        </p>
+        <p>
+        <i class="fa fa-adjust"></i><strong>数量:</strong><span class="text-center"><%= @topic.item_counts %></span>
+        </p>
+      </div>
+
+      <div class="mt-5">
+        <p class="h3">コンテンツの説明</p>
+        <p class="mt-5"><%= @topic.address %></p>
+        <p>
+          <strong>タイトル</strong>
+          <%= @topic.title %>
+        </p>
+
+        <p>
+          <strong>金額</strong>
+          <%= @topic.price %>
+        </p>
+
+        <p>
+          <strong>詳細</strong>
+          <%= @topic.details %>
+        </p>
+
+      </div>
+    </div>
+    <div class="col-md-4 mt-5">
+      <div class="card text-center" style="width: 200px;">
+        <div class="mt-4">
+        <% if @user.photo.present? %>
+        <%= image_tag @user.photo.thumb.url %>
+        <% end %>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center"><%= @user.user_name %></h5>
+          <p class="card-text text-center"><%= @user.company %></p>
+          <button class="btn btn-outline-secondary btn-block" id="tel" data-phone="<%= @user.phone %>"><i class="fa fa-mobile-alt mr-2"></i><span>電話番号</span></button>
+          <button class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#contact-modal"><i class="fa fa-mobile-alt mr-2"></i>Email</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <% @topics.each do |topic| %>
+    <div class="col-md-4 mb-4">
+      <div class="card" style="width: 252px;">
+      <% if topic.photo.present? %>
+        <%= link_to topic_path(topic) do %>
+        <%= image_tag topic.photo.thumb.url, style: "width: 250px; height: 200px;" %>
+        <% end %>
+      <% end %>
+        <div class="card-body">
+          <h4 class="card-title h5"><%= link_to topic.title, topic_path(topic), class: "text-secondary" %></h4>
+          <div class="card-text">
+            <span class="mr-2"><i class="fa fa-gamepad text-muted"><%= topic.title %></i></span>
+            <span class="mr-2"><i class="fa fa-adjust text-muted ml-1"><%= topic.item_counts %></i></span>
+            <p class="pt-2"><%= topic.address %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= @user.user_name %>にメッセージを送る</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_tag email_user_path, id: "email-user" do %>
+          <div class="form-group">
+            <label for="message-first-name" class="col-form-label">姓</label>
+            <%= text_field_tag :first_name, nil, class: "form-control", id: "message-first-name" %>
+          </div>
+
+          <div class="form-group">
+            <label for="message-last-name" class="col-form-label">名前</label>
+            <%= text_field_tag :last_name, nil, class: "form-control", id: "message-last-name" %>
+          </div>
+
+          <div class="form-group">
+            <label for="message-email" class="col-form-label">メールアドレス</label>
+            <%= text_field_tag :email, nil, class: "form-control", id: "message-email" %>
+          </div>
+
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">メッセージ</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+        <button type="button" class="btn btn-primary" id="send-message-to-user">送信</button>
+      </div>
+    </div>
+  </div>
+</div>
