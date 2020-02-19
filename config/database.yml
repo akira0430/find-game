@@ -26,7 +26,6 @@ test:
 
  production:
    <<: *default
-   url: <%= ENV['JAWSDB_URL']&.sub('mysql://', 'mysql2://') %>
-#   database: find_game_production
+   database: find_game1_production
 #   username: find_game
 #   password: <%= ENV['FIRST-WEB-APP_DATABASE_PASSWORD'] %>
