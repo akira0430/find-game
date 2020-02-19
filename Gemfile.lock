@@ -182,6 +182,7 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
     orm_adapter (0.5.0)
+    pg (1.2.2)
     popper_js (1.16.0)
     public_suffix (4.0.3)
     puma (3.12.2)
@@ -322,6 +323,7 @@ DEPENDENCIES
   mysql2
   omniauth
   omniauth-facebook (~> 4.0.0)
+  pg
   puma (~> 3.11)
   rails (~> 5.2.3)
   rails-i18n

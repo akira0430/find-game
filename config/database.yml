@@ -26,6 +26,6 @@ test:
 
  production:
    <<: *default
-   database: find_game1_production
+   #database: find_game1_production
 #   username: find_game
 #   password: <%= ENV['FIRST-WEB-APP_DATABASE_PASSWORD'] %>
