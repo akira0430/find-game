@@ -1,24 +1,29 @@
-# README
+1.ゲームを紹介するサイトです
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+タイトル、ゲームの個数を投稿
+タイトルとゲームの個数を投稿してオンラインショッピングのような機能を設けております。
+メールの送信、電話番号、詳細情報、ゲーム名、ゲームの画像を投稿できます
+メールの送信後は各自でやりとりを行うようにしてください
+投稿した本人のみが投稿の削除をおこなったり編集できるようにしました。閲覧はどのユーザーでもできます
 
-Things you may want to cover:
 
-* Ruby version
+・ajax送信
+・サムネイルのの画像の表示の仕方
+・scaffoldでのcontrollerの記載の仕方
 
-* System dependencies
 
-* Configuration
+2.ユーザー情報の閲覧機能
 
-* Database creation
+ユーザー個人のプロフィール画像と全てのユーザーの投稿したコメントを閲覧することができます
 
-* Database initialization
+・投稿機能をモーダルで
+・コメントと画像を投稿してゲームのより詳細な感想を投稿できるようにした
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+3.様々なgemを追加
 
-* ...
+devise、railsadmin、facebookログイン、carrierwave、kaminariなどなど
+
+・adminユーザーは一回urlにadminを入力してからメールアドレスichiro@gmail.com、パスワードfoobarでログインしてみてください
+・dockerの追加

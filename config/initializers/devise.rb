@@ -14,7 +14,7 @@ Devise.setup do |config|
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
 
-  config.omniauth :facebook, 'App ID', 'App Secret'
+  config.omniauth :facebook, '1265178690537668', 'e053eb1f0e0333d982d9bb468602286a'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
