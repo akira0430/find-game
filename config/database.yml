@@ -8,24 +8,30 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: password
-  socket: /tmp/mysql.sock
-  host: db
+  username: <%= ENV.fetch("MYSQL_USERNAME", "root") %>
+  password: <%= ENV.fetch("MYSQL_PASSWORD", "root") %>
+  host: <%= ENV.fetch("MYSQL_HOST", "db") %>
 
 development:
   <<: *default
-  database: find_game1_development
+  database: my_app_development
 
+test:
+  <<: *default
+  database: my_app_test
+
+production:
+  <<: *default
+  database: my_app_production
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: find_game1_test
+# test:
+#   <<: *default
+#   database: find_game1_test
 
- production:
-   <<: *default
-   database: find_game1_production
+ # production:
+ #   <<: *default
+ #   database: find_game1_production
 #   username: find_game
 #   password: <%= ENV['FIRST-WEB-APP_DATABASE_PASSWORD'] %>
