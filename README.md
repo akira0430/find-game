@@ -25,7 +25,13 @@
 
 devise、railsadmin、facebookログイン(ただいま修正中)、carrierwave、kaminariなどなど
 
+テストを全く書いていないのでRspecを今後導入予定です
+
 ・adminユーザーは一回urlにadminを入力してからメールアドレスichiro@gmail.com、パスワードfoobarでログインしてみてください
   ログイン後は必ずログアウトしてくださるようお願いします
+
+・awsの追加  
+
 ・dockerの追加
+
 ・本番環境は https://finder-game.herokuapp.com です  herokuでの確認

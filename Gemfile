@@ -96,3 +96,5 @@ gem 'tzinfo-data'
 gem 'bootstrap', '~> 4.3.1'
 
 gem 'jquery-rails'
+
+gem "aws-sdk", "~> 2.3"
