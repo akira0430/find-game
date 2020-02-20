@@ -23,7 +23,9 @@
 
 3.様々なgemを追加
 
-devise、railsadmin、facebookログイン、carrierwave、kaminariなどなど
+devise、railsadmin、facebookログイン(ただいま修正中)、carrierwave、kaminariなどなど
 
 ・adminユーザーは一回urlにadminを入力してからメールアドレスichiro@gmail.com、パスワードfoobarでログインしてみてください
+  ログイン後は必ずログアウトしてくださるようお願いします
 ・dockerの追加
+・本番環境はhttps://finder-game.herokuapp.comです  herokuでの確認
