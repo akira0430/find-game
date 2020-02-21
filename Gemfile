@@ -32,6 +32,8 @@ gem 'omniauth-facebook', '~> 4.0.0'
 
 gem 'carrierwave', '~> 1.0'
 
+gem 'fog'
+
 gem "mini_magick"
 
 gem 'font-awesome-sass', '~> 5.4.1'
